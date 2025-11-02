@@ -6,7 +6,7 @@ const zombieImages = [
   'https://images.unsplash.com/photo-1603899122634-f086ca5f5ddd?w=800&h=800&fit=crop',
   'https://images.unsplash.com/photo-1635863138275-d9b33299680b?w=800&h=800&fit=crop',
   'https://images.unsplash.com/photo-1570662472326-f7b958d6400c?w=800&h=800&fit=crop',
-  'https://images.unsplash.com/photo-1604431696980-07b5ee6c1d00?w=800&h=800&fit=crop',
+  'https://images.unsplash.com/photo-1604431696980-07b5ee6c1d00?w=800&h=800&fit=crop'
 ];
 
 function PuzzleBoard({ tiles, gridSize, selectedTile, onTileClick, isComplete }) {
@@ -57,12 +57,10 @@ function PuzzleBoard({ tiles, gridSize, selectedTile, onTileClick, isComplete })
 
       ctx.drawImage(img, sx, sy, sWidth, sHeight, dx, dy, tileSize, tileSize);
 
-      // Draw border
       ctx.strokeStyle = '#ff6600';
       ctx.lineWidth = 2;
       ctx.strokeRect(dx, dy, tileSize, tileSize);
 
-      // Highlight selected tile
       if (index === selectedTile) {
         ctx.fillStyle = 'rgba(255, 170, 0, 0.4)';
         ctx.fillRect(dx, dy, tileSize, tileSize);
@@ -121,9 +119,3 @@ function PuzzleBoard({ tiles, gridSize, selectedTile, onTileClick, isComplete })
 }
 
 export default PuzzleBoard;
-https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=800&h=800&fit=crop
-https://images.unsplash.com/photo-1603899122634-f086ca5f5ddd?w=800&h=800&fit=crop
-https://images.unsplash.com/photo-1635863138275-d9b33299680b?w=800&h=800&fit=crop
-https://images.unsplash.com/photo-1570662472326-f7b958d6400c?w=800&h=800&fit=crop
-https://images.unsplash.com/photo-1604431696980-07b5ee6c1d00?w=800&h=800&fit=crop
-zombieImages.lengthimg.crossOriginimg.onloadimageRef.currentimg.srccanvas.widthimg.widthimg.heightctx.strokeStylectx.lineWidthctx.fillStylecanvas.heightrect.top0window.innerWidth
