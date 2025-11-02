@@ -1,0 +1,47 @@
+.timer {
+  background: linear-gradient(135deg, #2a1a0a 0%, #1a0a00 100%);
+  border: 3px solid #ff6600;
+  border-radius: 10px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffaa00;
+  text-shadow: 2px 2px 4px #000;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.3);
+  min-width: 120px;
+  justify-content: center;
+}
+
+.timer-icon {
+  font-size: 1.8rem;
+  animation: tick 1s infinite;
+}
+
+@keyframes tick {
+  0%, 100% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+.timer-value {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .timer {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    min-width: 100px;
+  }
+
+  .timer-icon {
+    font-size: 1.4rem;
+  }
+}
