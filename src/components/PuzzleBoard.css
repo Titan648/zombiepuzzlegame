@@ -1,0 +1,73 @@
+.puzzle-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  position: relative;
+}
+
+.puzzle-canvas {
+  border: 5px solid #ff6600;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 30px rgba(255, 102, 0, 0.5),
+              inset 0 0 20px rgba(0, 0, 0, 0.5);
+  background: #000;
+  transition: all 0.3s ease;
+  max-width: 100%;
+  height: auto;
+}
+
+.puzzle-canvas.hidden {
+  display: none;
+}
+
+.puzzle-canvas:hover {
+  box-shadow: 0 0 40px rgba(255, 102, 0, 0.7),
+              inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.puzzle-canvas.complete {
+  animation: completePulse 1s ease-in-out;
+  border-color: #00ff00;
+  box-shadow: 0 0 50px rgba(0, 255, 0, 0.8);
+}
+
+@keyframes completePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: #ffaa00;
+  font-size: 1.2rem;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 102, 0, 0.3);
+  border-top-color: #ff6600;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .puzzle-canvas {
+    border-width: 3px;
+  }
+}
