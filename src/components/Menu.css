@@ -1,0 +1,172 @@
+.menu {
+  width: 100%;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-container {
+  background: rgba(0, 0, 0, 0.8);
+  border: 4px solid #ff6600;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 30px rgba(255, 102, 0, 0.5),
+              inset 0 0 20px rgba(255, 102, 0, 0.1);
+}
+
+.title {
+  font-size: 3.5rem;
+  color: #ff6600;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px #ff6600,
+               0 0 40px #ff0000,
+               3px 3px 0 #000;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    text-shadow: 0 0 20px #ff6600,
+                 0 0 40px #ff0000,
+                 3px 3px 0 #000;
+  }
+  50% {
+    text-shadow: 0 0 30px #ff6600,
+                 0 0 60px #ff0000,
+                 3px 3px 0 #000;
+  }
+}
+
+.subtitle {
+  text-align: center;
+  color: #ffaa00;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.levels {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.level-button {
+  background: linear-gradient(135deg, #2a1a0a 0%, #1a0a00 100%);
+  border: 3px solid #ff6600;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffaa00;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.level-button:hover {
+  background: linear-gradient(135deg, #3a2a1a 0%, #2a1a0a 100%);
+  border-color: #ffaa00;
+  transform: translateX(10px);
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
+}
+
+.level-button:active {
+  transform: translateX(10px) scale(0.98);
+}
+
+.level-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.level-name {
+  font-size: 1.3rem;
+  color: #ff6600;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.level-desc {
+  font-size: 0.9rem;
+  color: #ffaa00;
+  opacity: 0.8;
+}
+
+.best-time {
+  background: rgba(255, 102, 0, 0.2);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #ffaa00;
+  border: 2px solid #ff6600;
+}
+
+.instructions {
+  background: rgba(255, 102, 0, 0.1);
+  border: 2px solid #ff6600;
+  border-radius: 10px;
+  padding: 20px;
+  color: #ffaa00;
+}
+
+.instructions h3 {
+  color: #ff6600;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.instructions ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.instructions li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.instructions li:before {
+  content: '🧟';
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .menu-container {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .level-button {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .level-name {
+    font-size: 1.1rem;
+  }
+}
